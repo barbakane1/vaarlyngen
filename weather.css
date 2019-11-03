@@ -1,0 +1,139 @@
+div.data {
+    display: inline-block;
+    width: 220px;
+    height: 25px;
+}
+
+.main{
+    /*display:inline-block;*/
+    margin-left: 50px
+}
+
+#location {
+    margin-top: 20px;
+    margin-right: 0;
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#temp {
+    position: relative;
+    top: -50px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#description {
+    position: relative;
+    left: 105px;
+    top: -60px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p {
+    display: inline-block;
+}
+
+#leftmain, #rightmain {
+    display: inline-block;
+}
+
+#leftmain {
+    float: left;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+#rightmain {
+    position: relative;
+    width: 475px;
+    top: -180px;
+}
+
+.weatherimage {
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+.mainweather {
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    /*width: 90px;*/
+}
+
+.groupheader {
+    border: 1px solid #ccc;
+    background-color: #eee;
+    padding: 10px;
+}
+
+.groupitem {
+    height: 60px;
+    border-bottom: 1px solid #ddd;
+}
+
+.groupitem2 {
+    height: 60px;
+}
+
+.detailweather {
+    display: inline-block;
+    position: relative;
+    left: 50px;
+    vertical-align: middle;
+}
+
+.upperdetailweather, .lowerdetailweather {
+    min-height: 30px;
+}
+
+.upperdetailweather {
+    margin-top: 5px;
+}
+
+.detailweather_temp {
+    display: inline-block;
+    background-color: black;
+    color: #eeeeee;
+    font-size: 10px;
+    font-weight: bold;
+    /*height: 18px;*/
+    width: 45px;
+    border-radius: 9px;
+    text-align: center;
+    vertical-align: top;
+    margin-top: 4px;
+    padding: 2px;
+}
+
+.detailweather_temp_span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.detailweather_desc {
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+.detailweather_wind, .detailweather_clouds, .detailweather_pressure {
+    display: inline-block;
+}
+
+.detailweather_clouds, .detailweather_pressure, .detailweather_humidity {
+    margin-left: 10px;
+}
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+}

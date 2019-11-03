@@ -1,0 +1,51 @@
+﻿RewriteEngine on
+
+# 1 WEEK
+<filesMatch ".(jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=31557600, public"
+</filesMatch>
+
+<filesMatch ".(js|css)$">
+#Header set Cache-Control "max-age=31557600, public"
+Header set Cache-Control "max-age=0, public"
+</filesMatch>
+
+AddType text/x-component .htc
+AddDefaultCharset UTF-8
+
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+#RewriteEngine on
+#RewriteCond %{REQUEST_URI} ^/downloads/[^/]+\.(pdf)$
+#RewriteRule ^/?downloads/([^/]+\.\w+)$ /SendLinkContent.php?file=$1& [R=302]
+
+#RewriteRule ^/?downloads/([^/]+\.\w+)$ /base/user.php?a=$1 [R=302]
+#RewriteRule ^downloads/([^/]*)^.pdf$ /SendLinkContent.php?file=$1& [L]
+#RewriteRule ^/?downloads/([^/]+)\.pdf$ /base/user.php?a=$1 [R=302]
+#Options All -Indexes
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php5_module>
+   php_flag asp_tags Off
+   php_flag display_errors On
+   php_value max_execution_time 30
+   php_value max_input_time 300
+   php_value max_input_vars 10000
+   php_value memory_limit 1024M
+   php_value post_max_size 5G
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php56"
+   php_value upload_max_filesize 5120M
+   php_flag zlib.output_compression Off
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit
